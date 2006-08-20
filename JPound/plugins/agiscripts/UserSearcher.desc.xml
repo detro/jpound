@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agiscript>
+	<class classname="org.jpound.fastagi.usersearcher.AgiUserSearcher">
+		<filename>UserSearcher.jar</filename>
+		<description>Description of the UserSearcher</description>
+	</class>
+	<aliases>
+		<alias>usersearcher.agi</alias>
+		<alias>search.agi</alias>
+	</aliases>
+	<channels>
+		<channel type="sip" classname="org.jpound.fastagi.usersearcher.SipChannelTypeWrapper" />
+		<channel type="iax" classname="org.jpound.fastagi.usersearcher.IaxChannelTypeWrapper" />
+	</channels>
+</agiscript>
