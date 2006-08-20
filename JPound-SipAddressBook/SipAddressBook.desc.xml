@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agiscript>
+	<class classname="org.jpound.fastagi.sipaddressbook.AgiSipAddressBook">
+		<filename>SipAddressBook.jar</filename>
+		<description>Description of the SipAddressBook</description>
+	</class>
+	<aliases>
+		<alias>addressbook.agi</alias>
+	</aliases>
+	<keymaps>
+		<keymap name="itu-e1.161">
+			<description>
+				ITU E 1.161 International Standard Key Pad - 
+				The second half of the 20th century saw the demise of exchange 
+				names and the relaxation of rules on what digits could appear 
+				in area codes and exchange prefixes.
+				This, plus the use of touch tone dialing and vanity numbers 
+				finally led the telecom industry to come up with places 
+				for the remaining letters.
+			</description>
+			<key name="0" value="0" />
+			<key name="1" value="1" />
+			<key name="2" value="abc2" />
+			<key name="3" value="def3" />
+			<key name="4" value="ghi4" />
+			<key name="5" value="jkl5" />
+			<key name="6" value="mno6" />
+			<key name="7" value="pqrs7" />
+			<key name="8" value="tuv8" />
+			<key name="9" value="wxyz9" />
+		</keymap>
+		<keymap name="north-american-classic">
+			<description>
+				North American Classic Key Pad - 
+				This is the standard north american letter/number assignment 
+				found on Telephones in Canada and the US since beginning of the 
+				20th century.
+				The assignment of numbers to letters predates DTMF and touch 
+				dialing and is the same as found on many old rotary dial phones.
+			</description>
+			<key name="0" value="0" />
+			<key name="1" value="1" />
+			<key name="2" value="abc2" />
+			<key name="3" value="def3" />
+			<key name="4" value="ghi4" />
+			<key name="5" value="jkl5" />
+			<key name="6" value="mn6" />
+			<key name="7" value="prs7" />
+			<key name="8" value="tuv8" />
+			<key name="9" value="wxy9" />
+		</keymap>
+	</keymaps>
+	<selectedkeymap>itu-e1.161</selectedkeymap>
+</agiscript>
