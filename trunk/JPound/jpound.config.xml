@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jpound>
+	<!-- CoreServer Configuration Section -->
+	<coreserver>
+		<configfamilies averagenum="10">
+		</configfamilies>
+	
+		<configfiles averagenum="7">
+			<file>
+				<filename>cdr.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			<file>
+				<filename>rtp.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			<file>
+				<filename>voicemail.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			<file>
+				<filename>iax.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			
+			<file>
+				<filename>sip.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			<file>
+				<filename>queues.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+			<file>
+				<filename>extensions.conf</filename>
+				<tablename>asterisk_configuration</tablename>
+			</file>
+		</configfiles>
+		
+		<dbconnection>
+			<dsn>jdbc:postgresql://localhost:5432/asterisk_db</dsn>
+			<!-- <dsn>jdbc:postgresql://192.168.1.10:5432/asterisk_db</dsn> -->
+			<!-- <dsn>jdbc:postgresql://192.168.0.251:5432/asterisk_db</dsn> -->
+			<!-- <dsn>jdbc:postgresql://143.225.81.251:5432/asterisk_db</dsn> -->
+			<username>asterisk_user</username>
+			<password>asterisk_user</password>
+			<driver>org.postgresql.Driver</driver>
+		</dbconnection>
+	
+		<logging>
+			<configfilename>log4j.config.xml</configfilename>
+		</logging>
+	</coreserver>
+
+	<!-- FastAGI Configuration Section -->
+	<fastagi>
+		<mapping>
+			<scriptsdir>plugins/agiscripts</scriptsdir>
+		</mapping>
+		
+		<server>
+			<port>4573</port>
+			<poolsize>10</poolsize>
+			<poolmaxsize>200</poolmaxsize>
+		</server>
+	</fastagi>
+
+</jpound>
