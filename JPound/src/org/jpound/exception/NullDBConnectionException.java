@@ -1,5 +1,5 @@
 /**
- * File: NullDBConnection.java
+ * File: NullDBConnectionException.java
  * Created by: detro
  * Created at: Aug 14, 2006 */
 package org.jpound.exception;
@@ -9,21 +9,21 @@ package org.jpound.exception;
  * @project JPound
  * @package org.jpound.exception
  * @startdate Aug 14, 2006
- * @type NullDBConnection
+ * @type NullDBConnectionException
  */
-public class NullDBConnection extends Exception {
+public class NullDBConnectionException extends Exception {
 	public static final long serialVersionUID = 734093482;
 	/**
 	 * 
 	 */
-	public NullDBConnection() {
+	public NullDBConnectionException() {
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * @param message
 	 */
-	public NullDBConnection(String message) {
+	public NullDBConnectionException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
@@ -31,7 +31,7 @@ public class NullDBConnection extends Exception {
 	/**
 	 * @param cause
 	 */
-	public NullDBConnection(Throwable cause) {
+	public NullDBConnectionException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
@@ -40,7 +40,7 @@ public class NullDBConnection extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public NullDBConnection(String message, Throwable cause) {
+	public NullDBConnectionException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}

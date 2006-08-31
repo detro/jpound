@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.jpound.db.wrapper.BaseAsteriskConfigurationFile;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.exception.TableNotFoundException;
 import org.jpound.exception.TooManyMatchException;
 import org.jpound.exception.UnableToGetVariableException;
@@ -77,7 +77,7 @@ public class AsteriskConfigurationFileTest {
 			logger.error(e1);
 		} catch (UnableToWrapConfigurationFileException e1) {
 			logger.error(e1);
-		} catch (NullDBConnection e1) {
+		} catch (NullDBConnectionException e1) {
 			logger.error(e1);
 		}
 		

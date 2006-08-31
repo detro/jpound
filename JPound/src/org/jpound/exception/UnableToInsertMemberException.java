@@ -1,5 +1,5 @@
 /**
- * File: UnableToDeleteMember.java
+ * File: UnableToInsertMemberException.java
  * Created by: detro
  * Created at: Jul 23, 2006 */
 package org.jpound.exception;
@@ -9,23 +9,23 @@ package org.jpound.exception;
  * @project JPound
  * @package org.jpound.exception
  * @startdate Jul 23, 2006
- * @type UnableToDeleteMember
+ * @type UnableToInsertMemberException
  */
-public class UnableToDeleteMember extends Exception {
+public class UnableToInsertMemberException extends Exception {
 
-	public static final long serialVersionUID = 76521; 
+	public static final long serialVersionUID = 827168; 
 	
 	/**
 	 * 
 	 */
-	public UnableToDeleteMember() {
+	public UnableToInsertMemberException() {
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * @param message
 	 */
-	public UnableToDeleteMember(String message) {
+	public UnableToInsertMemberException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
@@ -33,7 +33,7 @@ public class UnableToDeleteMember extends Exception {
 	/**
 	 * @param cause
 	 */
-	public UnableToDeleteMember(Throwable cause) {
+	public UnableToInsertMemberException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
@@ -42,7 +42,7 @@ public class UnableToDeleteMember extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public UnableToDeleteMember(String message, Throwable cause) {
+	public UnableToInsertMemberException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}

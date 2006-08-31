@@ -7,10 +7,10 @@ package org.jpound.wrapper;
 import java.sql.ResultSet;
 import java.util.Map;
 
-import org.jpound.exception.UnableToDeleteMember;
-import org.jpound.exception.UnableToInsertMember;
-import org.jpound.exception.UnableToSelectMember;
-import org.jpound.exception.UnableToUpdateMember;
+import org.jpound.exception.UnableToDeleteMemberException;
+import org.jpound.exception.UnableToInsertMemberException;
+import org.jpound.exception.UnableToSelectMemberException;
+import org.jpound.exception.UnableToUpdateMemberException;
 
 /**
  * Questa interfaccia descrive le funzionalita' di base per poter
@@ -50,9 +50,9 @@ public interface AsteriskConfigurationFamily {
 	 * 
 	 * @param conditions
 	 * @return ResultSet delle Row trovate
-	 * @throws UnableToSelectMember */
+	 * @throws UnableToSelectMemberException */
 	public ResultSet selectMember (Map conditions) 
-		throws UnableToSelectMember;
+		throws UnableToSelectMemberException;
 
 	/**
 	 * @see AsteriskConfigurationFamily#selectMember(Map)
@@ -62,17 +62,17 @@ public interface AsteriskConfigurationFamily {
 	 * 
 	 * @param conditions
 	 * @return ResultSet delle Row trovate
-	 * @throws UnableToSelectMember */
+	 * @throws UnableToSelectMemberException */
 	public ResultSet selectMember (String conditions) 
-		throws UnableToSelectMember;
+		throws UnableToSelectMemberException;
 	
 	/**
 	 * Inserisce un Membro nella Family.
 	 * 
 	 * @param values
-	 * @throws UnableToInsertMember */
+	 * @throws UnableToInsertMemberException */
 	public void insertMember (Map values) 
-		throws UnableToInsertMember;
+		throws UnableToInsertMemberException;
 	
 	/**
 	 * 
@@ -81,9 +81,9 @@ public interface AsteriskConfigurationFamily {
 	 * @param values
 	 * @param conditions
 	 * @return Numero di Row aggiornate
-	 * @throws UnableToUpdateMember */
+	 * @throws UnableToUpdateMemberException */
 	public int updateMember (Map values, Map conditions) 
-		throws UnableToUpdateMember;
+		throws UnableToUpdateMemberException;
 	
 	/**
 	 * @see AsteriskConfigurationFamily#updateMember(Map, Map)
@@ -94,19 +94,19 @@ public interface AsteriskConfigurationFamily {
 	 * @param values
 	 * @param conditions
 	 * @return Numero di Row aggiornate
-	 * @throws UnableToUpdateMember
+	 * @throws UnableToUpdateMemberException
 	 */
 	public int updateMember (Map values, String conditions) 
-		throws UnableToUpdateMember;
+		throws UnableToUpdateMemberException;
 	
 	/**
 	 * Cancella una o piu' Membri in base alle "conditions".
 	 * 
 	 * @param conditions
 	 * @return Numero di Row cancellate
-	 * @throws UnableToDeleteMember */
+	 * @throws UnableToDeleteMemberException */
 	public int deleteMember (Map conditions) 
-		throws UnableToDeleteMember;
+		throws UnableToDeleteMemberException;
 	
 	/**
 	 * @see AsteriskConfigurationFamily#deleteMember(Map)
@@ -116,9 +116,9 @@ public interface AsteriskConfigurationFamily {
 	 * 
 	 * @param conditions
 	 * @return Numero di Row cancellate
-	 * @throws UnableToDeleteMember */
+	 * @throws UnableToDeleteMemberException */
 	public int deleteMember (String conditions) 
-		throws UnableToDeleteMember;
+		throws UnableToDeleteMemberException;
 	
 	/**
 	 * Valida una mappa di valori, controllando che sia valida come Membro

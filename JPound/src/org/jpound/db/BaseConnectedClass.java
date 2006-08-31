@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 import org.apache.commons.lang.NullArgumentException;
 import org.apache.log4j.Logger;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 
 /**
  * Questa Classe e' la Base da cui estendere per creare classi
@@ -51,11 +51,11 @@ public class BaseConnectedClass {
 	 * @throws NullArgumentException Se il parametro {@link Connection} e'
 	 * 		"null". */
 	public BaseConnectedClass(Connection newDbConnection) 
-		throws NullDBConnection {
+		throws NullDBConnectionException {
 		super();
 		
 		if ( newDbConnection == null )
-			throw new NullDBConnection();
+			throw new NullDBConnectionException();
 		
 		this.dbConnection = newDbConnection;
 	}

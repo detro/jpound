@@ -16,7 +16,7 @@ import org.asteriskjava.fastagi.AgiScript;
 import org.jpound.db.BaseConnectedClass;
 import org.jpound.db.ConfigurationsConnectionsPool;
 import org.jpound.exception.NotInitiatedException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 
 /**
  * Questa Classe eredita da {@link AbstractJPoundAgiScript} ed 
@@ -60,7 +60,7 @@ public abstract class AbstractConnectedJPoundAgiScript
 			// Istanzio la classe connessa al DB
 			this.connectedObject = new BaseConnectedClass( 
 					ConfigurationsConnectionsPool.getConnection() );
-		} catch (NullDBConnection e) {
+		} catch (NullDBConnectionException e) {
 			throw new NotInitiatedException(e);
 		}
 	}
