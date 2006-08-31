@@ -13,7 +13,7 @@ import org.asteriskjava.fastagi.AgiChannel;
 import org.asteriskjava.fastagi.AgiException;
 import org.jpound.db.DBConstants;
 import org.jpound.exception.NoMatchException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.fastagi.usersearcher.exception.UnableToMakeCallException;
 
 /**
@@ -36,9 +36,9 @@ public class SipChannelTypeWrapper extends ChannelTypeWrapper {
 	/**
 	 * Constructor
 	 * @param dbConnection
-	 * @throws NullDBConnection */
+	 * @throws NullDBConnectionException */
 	public SipChannelTypeWrapper(Connection dbConnection) 
-		throws NullDBConnection {
+		throws NullDBConnectionException {
 		super(dbConnection);
 	}
 

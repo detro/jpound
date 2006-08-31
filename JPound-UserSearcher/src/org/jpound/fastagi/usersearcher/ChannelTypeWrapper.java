@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.asteriskjava.fastagi.AgiChannel;
 import org.jpound.db.BaseConnectedClass;
 import org.jpound.exception.NoMatchException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.fastagi.usersearcher.exception.UnableToMakeCallException;
 
 /**
@@ -125,9 +125,9 @@ public abstract class ChannelTypeWrapper extends BaseConnectedClass {
 	/**
 	 * Constructor
 	 * @param dbConnection Connessione al DB
-	 * @throws NullDBConnection Se la connessione al DB e' "null" */
+	 * @throws NullDBConnectionException Se la connessione al DB e' "null" */
 	public ChannelTypeWrapper(Connection dbConnection) 
-		throws NullDBConnection {
+		throws NullDBConnectionException {
 		super(dbConnection);
 	}
 	

@@ -19,7 +19,7 @@ import org.jpound.db.DBConstants;
 import org.jpound.exception.NoMatchException;
 import org.jpound.exception.NotEnoughParametersException;
 import org.jpound.exception.NotInitiatedException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.fastagi.AbstractConnectedJPoundAgiScript;
 import org.jpound.fastagi.AbstractJPoundAgiScript;
 import org.jpound.fastagi.usersearcher.exception.UnableToMakeCallException;
@@ -165,7 +165,7 @@ public class AgiUserSearcher extends AbstractConnectedJPoundAgiScript {
 		try {
 			multiChannelTypeWrapper = new MultiChannelTypeWrapper(this
 					.getDbConnection());
-		} catch (NullDBConnection e) {
+		} catch (NullDBConnectionException e) {
 			logger.error(e);
 			return;
 		}
