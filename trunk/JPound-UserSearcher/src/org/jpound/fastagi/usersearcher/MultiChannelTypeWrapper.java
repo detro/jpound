@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 import org.asteriskjava.fastagi.AgiChannel;
 import org.asteriskjava.fastagi.AgiException;
 import org.jpound.exception.NoMatchException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.fastagi.usersearcher.exception.UnableToMakeCallException;
 
 /**
@@ -54,9 +54,9 @@ public class MultiChannelTypeWrapper extends ChannelTypeWrapper {
 	/**
 	 * Constructor
 	 * @param dbConnection
-	 * @throws NullDBConnection */
+	 * @throws NullDBConnectionException */
 	public MultiChannelTypeWrapper(Connection dbConnection) 
-		throws NullDBConnection {
+		throws NullDBConnectionException {
 		super(dbConnection);
 	}
 	
