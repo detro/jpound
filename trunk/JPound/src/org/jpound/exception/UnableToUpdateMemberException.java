@@ -1,5 +1,5 @@
 /**
- * File: UnableToUpdateMember.java
+ * File: UnableToUpdateMemberException.java
  * Created by: detro
  * Created at: Jul 23, 2006 */
 package org.jpound.exception;
@@ -9,23 +9,23 @@ package org.jpound.exception;
  * @project JPound
  * @package org.jpound.exception
  * @startdate Jul 23, 2006
- * @type UnableToUpdateMember
+ * @type UnableToUpdateMemberException
  */
-public class UnableToUpdateMember extends Exception {
+public class UnableToUpdateMemberException extends Exception {
 
 	public static final long serialVersionUID = 9879821; 
 	
 	/**
 	 * 
 	 */
-	public UnableToUpdateMember() {
+	public UnableToUpdateMemberException() {
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * @param message
 	 */
-	public UnableToUpdateMember(String message) {
+	public UnableToUpdateMemberException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
@@ -33,7 +33,7 @@ public class UnableToUpdateMember extends Exception {
 	/**
 	 * @param cause
 	 */
-	public UnableToUpdateMember(Throwable cause) {
+	public UnableToUpdateMemberException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
@@ -42,7 +42,7 @@ public class UnableToUpdateMember extends Exception {
 	 * @param message
 	 * @param cause
 	 */
-	public UnableToUpdateMember(String message, Throwable cause) {
+	public UnableToUpdateMemberException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}

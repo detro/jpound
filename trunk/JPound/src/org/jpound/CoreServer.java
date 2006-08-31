@@ -30,7 +30,7 @@ import org.jpound.db.ConfigurationsConnectionsPool;
 import org.jpound.db.wrapper.BaseAsteriskConfigurationFile;
 import org.jpound.exception.NotADirectoryException;
 import org.jpound.exception.NotInitiatedException;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.exception.TableNotFoundException;
 import org.jpound.exception.UnableToWrapConfigurationFileException;
 import org.jpound.fastagi.DefaultAgiServerThread;
@@ -339,7 +339,7 @@ public class CoreServer extends Thread {
 				throw new NotInitiatedException(e);
 			} catch (UnableToWrapConfigurationFileException e) {
 				throw new NotInitiatedException(e);
-			} catch (NullDBConnection e) {
+			} catch (NullDBConnectionException e) {
 				throw new NotInitiatedException(e);
 			}
 		}

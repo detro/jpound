@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.jpound.db.BaseConnectedClass;
-import org.jpound.exception.NullDBConnection;
+import org.jpound.exception.NullDBConnectionException;
 import org.jpound.exception.TableNotFoundException;
 import org.jpound.exception.TooManyMatchException;
 import org.jpound.exception.UnableToGetVariableException;
@@ -122,7 +122,7 @@ public class BaseAsteriskConfigurationFile extends BaseConnectedClass implements
 	public BaseAsteriskConfigurationFile(Connection dbConnection,
 			String tableName, String configurationFilename)
 			throws TableNotFoundException,
-			UnableToWrapConfigurationFileException, NullDBConnection {
+			UnableToWrapConfigurationFileException, NullDBConnectionException {
 		
 		
 		// Inizializzo la classe di Base BaseConnectedClass

@@ -9,11 +9,11 @@ import java.sql.ResultSet;
 import java.util.Map;
 
 import org.jpound.db.BaseConnectedClass;
-import org.jpound.exception.NullDBConnection;
-import org.jpound.exception.UnableToDeleteMember;
-import org.jpound.exception.UnableToInsertMember;
-import org.jpound.exception.UnableToSelectMember;
-import org.jpound.exception.UnableToUpdateMember;
+import org.jpound.exception.NullDBConnectionException;
+import org.jpound.exception.UnableToDeleteMemberException;
+import org.jpound.exception.UnableToInsertMemberException;
+import org.jpound.exception.UnableToSelectMemberException;
+import org.jpound.exception.UnableToUpdateMemberException;
 import org.jpound.wrapper.AsteriskConfigurationFamily;
 import org.jpound.wrapper.AsteriskConfigurationFile;
 
@@ -68,7 +68,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	 * @param newDbConnection
 	 */
 	public BaseAsteriskConfigurationFamily(Connection newDbConnection)
-			throws NullDBConnection {
+			throws NullDBConnectionException {
 		super(newDbConnection);
 		// TODO Auto-generated constructor stub
 	}
@@ -76,7 +76,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	/**
 	 * @see org.jpound.wrapper.AsteriskConfigurationFamily#deleteMember(java.util.Map)
 	 */
-	public int deleteMember(Map conditions) throws UnableToDeleteMember {
+	public int deleteMember(Map conditions) throws UnableToDeleteMemberException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -84,7 +84,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	/**
 	 * @see org.jpound.wrapper.AsteriskConfigurationFamily#deleteMember(java.lang.String)
 	 */
-	public int deleteMember(String conditions) throws UnableToDeleteMember {
+	public int deleteMember(String conditions) throws UnableToDeleteMemberException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -92,7 +92,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	/**
 	 * @see org.jpound.wrapper.AsteriskConfigurationFamily#insertMember(java.util.Map)
 	 */
-	public void insertMember(Map values) throws UnableToInsertMember {
+	public void insertMember(Map values) throws UnableToInsertMemberException {
 		// TODO Auto-generated method stub
 
 	}
@@ -108,7 +108,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	/**
 	 * @see org.jpound.wrapper.AsteriskConfigurationFamily#selectMember(java.util.Map)
 	 */
-	public ResultSet selectMember(Map conditions) throws UnableToSelectMember {
+	public ResultSet selectMember(Map conditions) throws UnableToSelectMemberException {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -117,7 +117,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	 * @see org.jpound.wrapper.AsteriskConfigurationFamily#selectMember(java.lang.String)
 	 */
 	public ResultSet selectMember(String conditions)
-			throws UnableToSelectMember {
+			throws UnableToSelectMemberException {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -127,7 +127,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	 *      java.util.Map)
 	 */
 	public int updateMember(Map values, Map conditions)
-			throws UnableToUpdateMember {
+			throws UnableToUpdateMemberException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -137,7 +137,7 @@ public abstract class BaseAsteriskConfigurationFamily extends
 	 *      java.lang.String)
 	 */
 	public int updateMember(Map values, String conditions)
-			throws UnableToUpdateMember {
+			throws UnableToUpdateMemberException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
